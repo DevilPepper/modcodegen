@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mod code Generator</title>
+    <script src="js/binaryReader.js" type="text/javascript"></script>
+    <!-- script src="http://geckocodes.org/includes/arsenal.js" type="text/javascript"></script -->
+    <script type="text/javascript" src="js/jdataview.js"></script>
+    <script src="js/stuff.js" type="text/javascript"></script>
+    <script src="js/gunmod.js" type="text/javascript"></script>
+    <script src="js/modcodes.js" type="text/javascript"></script>
+    <script src="js/weaponmod.js" type="text/javascript"></script>
+    <script src="js/armormod.js" type="text/javascript"></script>
+    <script src="js/itembox.js" type="text/javascript"></script>
+    <script src="js/equipbox.js" type="text/javascript"></script>
+    <script src="js/pouch.js" type="text/javascript"></script>
+    <script src="js/globalEventHandler.js" type="text/javascript"></script>
+    
+    <style type="text/css">
+        #txtCode
+        {
+            resize: none;
+            width: 167px;
+        }
+    </style>
+</head>
+<body bgcolor="#000000" text="#ffffff" onload="init();">
+	<!-- Start of adf.ly banner code -->
+	<a href="http://adf.ly/?id=1080026"><img border=0 src="http://adf.ly/images/banners/adfly.350x19.1.png" width="350" height="19" title="AdF.ly - shorten links and earn money!"></a>
+	<!-- End of adf.ly banner code -->
+	<br />
+<div id="divSlct" style="border-style: outset; width: 841px;">
+<label id="lblMod">Code Type</label>
+<!-- needs more options. Will determine the interface. -->
+    <select id="slctMod" name="slctMod" onchange="return slctMod_onchange()">
+        <option value="0" id="optMod0" selected="selected">Select one</option>
+        <option value="1" id="optMod1" title="">Weapons</option>
+        <option value="2" id="optMod2" title="">Armor</option>
+        <option value="3" id="optMod3" title="">Item Box</option>
+        <option value="4" id="optMod4" title="Includes Talisman Creation">Equip Box</option>
+        <option value="5" id="optMod5" title="">Pouch</option>
+    </select>
+</div>
+    <div id="divCode" 
+        style="border-style: inset; float: left; position: relative;">
+        <textarea id="txtCode" name="S1" rows="20"></textarea><br />
+        <input id="btnClear" type="button" value="Clear" onclick="document.getElementById('txtCode').value = '';" />
+        </div>
+    <div id="divStuff" style="position: relative; float: left;">
+        <input id="hiddenData" type="hidden" />
+        <input id="unownData" type="hidden" />
+        <input id="_Data" type="hidden" />
+        <input id="mysteryData" type="hidden" />
+    </div></body>
+</html>
